@@ -1,0 +1,16 @@
+[
+    {
+        "name":"URU Brewpark",
+        "payment_method":{
+                            "card":"true",
+                            "upi":"true",
+                            "cash":"true"
+                        },
+        "total_votes": 766,
+        "reviews" : 512,
+        "cost" : "50",
+        "categories":["Continental","Pizza","Asian","Dessert"],
+        "stars": 4
+        
+    }
+]
