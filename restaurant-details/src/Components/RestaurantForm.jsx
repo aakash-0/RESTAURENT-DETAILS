@@ -14,18 +14,15 @@ export default function RestaurantForm({getData}) {
         useEffect(()=>{ setFormData({
             ...formData,
             payment_method:pay,
-            categorys:cat
+            categories:cat,
+            
         });},[pay,cat])
 
 
     const handelpay = (e)=>{
        var {name,value} = e.target;
-        value = (e.target.checked?true:false)
-            setPay({
-                    ...pay,
-                    [name]:value
-                })
-                
+        value = (e.target.checked?"true":"false")
+            setPay({...pay,[name]:value})
     }
 
     const handelText = (e)=>{
@@ -36,12 +33,7 @@ export default function RestaurantForm({getData}) {
         e.preventDefault()
         setCat([...cat,text])
         setText("");
-        // setFormData({
-        //     ...formData,
-        //     categorys:cat
-        // });
-
-    }
+        }
 
     const handelForm = (e)=>{
         const {name,value} = e.target;
@@ -51,19 +43,22 @@ export default function RestaurantForm({getData}) {
      }
 
   return (
-      <div>
+      <div className=' form-container'>
           <form className='add-data-form'>
                 <div>Name of the restaurent
                   <input type="text" onChange={handelForm} name="name" placeholder='enter the name'></input>
                 </div>
                 <div>image link
-                  <input type="text" onChange={handelForm} name="name" placeholder='enter the image link'></input>
+                  <input type="text" onChange={handelForm} name="image" placeholder='enter the image link'></input>
                 </div>
                 <div>total_votes
                   <input type="text" onChange={handelForm} name="total_votes" placeholder='enter the value'></input>
                 </div>
                 <div>revievs
                   <input type="text" onChange={handelForm} name="reviews" placeholder='enter the value'></input>
+                </div>
+                <div>cost
+                  <input type="text" onChange={handelForm} name="cost" placeholder='enter the value'></input>
                 </div>
                 <div>stars
                   <input type="text" onChange={handelForm} name="stars" placeholder='enter the value'></input>
