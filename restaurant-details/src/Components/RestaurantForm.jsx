@@ -58,7 +58,7 @@ export default function RestaurantForm({getData}) {
                   <input type="text" onChange={handelForm} name="reviews" placeholder='enter the value'></input>
                 </div>
                 <div>cost
-                  <input type="text" onChange={handelForm} name="cost" placeholder='enter the value'></input>
+                  <input type="number" onChange={handelForm} name="cost" placeholder='enter the value'></input>
                 </div>
                 <div>stars
                   <input type="text" onChange={handelForm} name="stars" placeholder='enter the value'></input>

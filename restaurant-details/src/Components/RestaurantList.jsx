@@ -5,9 +5,9 @@ function RestaurantList(Data) {
 
     const [paymode,setPayMode] = useState([]);
     useEffect(()=>{
-        var arr = [];
+       const arr = [];
             for( let i in data.payment_method){
-                (data.payment_method[i]==="true" && arr.push(i))
+                (data.payment_method[i]=="true" && arr.push(i))
             }
         
        setPayMode(arr);
@@ -39,7 +39,7 @@ function RestaurantList(Data) {
            
         </div>
         <div  className='payment-info'>
-            Accepts {paymode.length>1?paymode.join(","):paymode}
+            Accepts {paymode.length>1?paymode.join(" "):paymode}
         </div>
         
      </div>

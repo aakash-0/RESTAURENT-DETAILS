@@ -53,8 +53,12 @@ function Restaurant() {
        
     }
     var sort = (a,b)=>{
-        if(price==0){
-            return a.cost.localeCompare(b.cost);
+        if(price==1){
+           
+            return a.cost-b.cost;
+        }
+        else if(price==0){
+            return b.cost-a.cost
         }
        
     }
